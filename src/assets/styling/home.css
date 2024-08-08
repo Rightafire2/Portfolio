@@ -1,0 +1,43 @@
+.background-image-me {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.background-image-me::before {
+    content: "";
+    position: absolute;
+    background: url('../images/background.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.75;
+}
+
+.large-text {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: "Roboto";
+}
+
+h1 {
+    color: rgb(0, 0, 0) !important;
+    font-weight: bold !important;
+    font-size: 100px !important;
+}
+
+.typed {
+    font-size: 50px !important;
+    color: rgb(255, 255, 255) !important;
+}

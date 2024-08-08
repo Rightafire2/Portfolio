@@ -1,4 +1,5 @@
-import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap'
+import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
+import '../styling/navbar.css';
 
 export const Navigation = () => {
     return (
