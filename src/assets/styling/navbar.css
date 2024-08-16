@@ -1,0 +1,63 @@
+/* Navbar links */
+.navbar a {
+    text-decoration: none;
+    color: white; /* Default link color */
+}
+
+/* Navbar brand link */
+.navbar-brand a {
+    color: inherit; /* Inherit color based on mode (light/dark) */
+}
+
+/* Dropdown menu */
+.navbar .dropdown-menu {
+    background-color: #343a40; /* Match the navbar background */
+}
+
+.navbar .dropdown-item {
+    color: white; /* White text for dropdown items */
+}
+
+.navbar .dropdown-item:hover {
+    background-color: #495057; /* Slightly lighter background on hover */
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff; /* Default color */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+/* Active link styling */
+.navbar-nav .nav-link.active {
+    color: #ffd700; /* Active link color */
+    font-weight: bold; /* Bold active link */
+    border-bottom: 2px solid #ffd700; /* Underline active link */
+}
+
+.navbar-nav .nav-link:hover, .navbar-brand:hover {
+    color: #ffd700; /* Change color on hover */
+    transform: scale(1.1); /* Slightly increase size on hover */
+}
+
+/* Toggle button */
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.1); /* Light border for the toggle button */
+}
+
+/* Dark mode */
+.dark-mode .navbar {
+    background-color: #121212; /* Darker background for dark mode */
+}
+
+.dark-mode .navbar a {
+    color: white; /* White text for links in dark mode */
+}
+
+.dark-mode .navbar .dropdown-menu {
+    background-color: #121212; /* Match the dark mode background */
+}
+
+.animations-disabled * {
+    animation: none !important;
+    transition: none !important;
+}

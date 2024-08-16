@@ -1,3 +1,24 @@
-.in-order {
-    display: flex;
+.about-me-container {
+    padding: 20px;
+}
+
+.abt-text {
+    font-size: 2vw;
+}
+
+/* max-width and font-size changes suggested by ChatGPT */
+@media (max-width: 767px) {
+    .about-me-container h1 {
+        font-size: 24px; /* Smaller font size for the heading */
+    }
+
+    .about-me-container p {
+        font-size: 18px; /* Smaller font size for the paragraph */
+    }
+}
+
+.about-img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
 }

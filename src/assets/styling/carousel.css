@@ -1,0 +1,37 @@
+img {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+}
+
+.carousel {
+    border: 5px solid rgba(255, 0, 0, 1);
+}
+
+.carousel-caption {
+    position: absolute;
+    
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better contrast */
+    padding: 10px;
+    border-radius: 10px; /* Slight rounding for a softer look */
+    width: 100%; /* Full width of the carousel item */
+}
+
+.carousel-caption h3 {
+    font-size: 2rem; /* Larger font size for the title */
+    font-weight: 700; /* Bold font weight */
+    color: #ffd700; /* Bright color to stand out */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Subtle text shadow */
+    margin-bottom: 10px;
+}
+
+.carousel-caption p {
+    font-size: 1.2rem; /* Slightly larger font size for the subtitle */
+    font-weight: 500; /* Medium font weight */
+    color: #ffffff; /* White color for the subtitle */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Subtle text shadow */
+    margin: 0;
+}

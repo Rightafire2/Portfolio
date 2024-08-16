@@ -1,15 +1,47 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap);
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+
+/* linear-gradient and dark-mode styling referenced from ChatGPT (root, body, body.dark-mode */
+:root {
+    --background-gradient-light: linear-gradient(135deg, #f06, #ff9);
+    --background-gradient-dark: linear-gradient(135deg, #000428, #004e92);
+}
+
+body {
+    background: var(--background-gradient-light);
+    transition: background 0.5s ease; /* Smooth transition when switching modes */
+}
+
+/* Dark mode background */
+body.dark-mode {
+    background: var(--background-gradient-dark);
+}
+
+body, html {
+    overflow-x: hidden;
+}
+
 .background-image-me {
     position: relative;
     height: 100vh;
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+    max-width: 100vw;
 }
 
-.background-image-me::before {
-    content: "";
+
+.background-overlay {
     position: absolute;
-    background: url('../images/background.jpg') no-repeat;
+    background: url('../images/background.jpg');
     background-size: cover;
     background-position: center;
     top: 0;
@@ -17,11 +49,13 @@
     left: 0;
     right: 0;
     opacity: 0.75;
+    z-index: 1;
 }
 
 .large-text {
     display: flex;
-    position: absolute;
+    position: relative;
+    z-index: 2;
     width: 100%;
     height: 100%;
     flex-direction: column;
@@ -33,11 +67,21 @@
 
 h1 {
     color: rgb(0, 0, 0) !important;
-    font-weight: bold !important;
-    font-size: 100px !important;
+    font-family: montserrat, sans-serif;
+    font-size: 6vw !important;
 }
 
 .typed {
-    font-size: 50px !important;
-    color: rgb(255, 255, 255) !important;
+    color: rgb(255, 0, 255) !important;
+    font-family: montserrat, sans-serif;
+    font-size: 3vw !important;
+}
+
+#tsparticles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Ensures particles are behind the text */
 }

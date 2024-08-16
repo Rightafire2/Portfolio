@@ -1,30 +1,46 @@
-import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
+import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import '../styling/navbar.css';
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
-export const Navigation = () => {
+export const Navigation = ({ navData, toggleMode }) => {
+    const [animationsEnabled, setAnimationsEnabled] = useState(true);
+
+    const toggleAnimations = () => {
+      setAnimationsEnabled((prevEnabled) => {
+          const newEnabled = !prevEnabled;
+          document.body.classList.toggle('animations-disabled', !newEnabled);
+          return newEnabled;
+      });
+  };
+
     return (
-        <Navbar expand="md" bg="dark" variant="dark">
-          <Container>
-            <Navbar.Brand href="#home">Amogh Bharadwaj</Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="me-auto">
-                <Nav.Link href="#home">About Me</Nav.Link>
-                <Nav.Link href="#link">Portfolio</Nav.Link>
+        <Navbar expand="md" bg="dark" variant="dark" className='navbar px-5'>
+            <Navbar.Brand href="/">
+              <Link to={"/"} className="navbar-brand">
+                Amogh Bharadwaj
+              </Link>
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            <Navbar.Collapse id="responsive-navbar-nav">
+              <Nav className="ms-auto">
+                {navData.map((item, index) => (
+                  <Nav.Link key={index}>
+                    <Link to={item.path}>
+                      {item.name}
+                    </Link>
+                  </Nav.Link>
+                ))}
                 <NavDropdown title="Configuration" id="basic-nav-dropdown">
-                  <NavDropdown.Item href="#action/3.1">Dark Mode</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.2">
-                    Another action
+                  <NavDropdown.Item onClick={() => toggleMode()} tabIndex={0}>
+                    Dark Mode
                   </NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href="#action/3.4">
-                    Separated link
+                  <NavDropdown.Item onClick={toggleAnimations} tabIndex={1}>
+                    {animationsEnabled ? 'Disable Animations' : 'Enable Animations'}
                   </NavDropdown.Item>
                 </NavDropdown>
               </Nav>
             </Navbar.Collapse>
-          </Container>
         </Navbar>
       );
 }

@@ -1,33 +1,30 @@
 import Card from 'react-bootstrap/Card';
-import reactImg from '../images/react-logo.png'
-import pythonImg from '../images/python-logo.jpg'
-import '../styling/skills.css'
+import '../styling/skills.css';
+import { CardGroup } from 'react-bootstrap';
+import React from 'react';
 
-export const CodingSkillsCards = () => {
+export const CodingSkillsCards = ({ mode, codingInfo }) => {
     return (
-        <div className="d-flex align-items-center  
-                        justify-content-center vh-100">
-            <Card className="mx-auto border-4 border-success" style = {{ width: '18rem' }}>
-                <Card.Img variant='top' src={reactImg} />
-                <Card.Body>
-                    <Card.Title>ReactJS</Card.Title>
-                    <Card.Text>I have experience with web page development using ReactJS, HTML, and CSS. I have made multiple web pages using these tools including this site, and <a href='https://ulcerativecolitis.fly.dev'>my UC information page</a>.</Card.Text>
-                </Card.Body>
-            </Card>
-            <Card className="mx-auto border-4 border-primary" style = {{ width: '18rem' }}>
-                <Card.Img variant='top' src={pythonImg} />
-                <Card.Body>
-                    <Card.Title>Python</Card.Title>
-                    <Card.Text>I have extensive experience coding in Python and have created numerous projects including weighted simulation trials, distributed cache, and Redis.</Card.Text>
-                </Card.Body>
-            </Card>
-            <Card className="mx-auto border-4 border-danger" style = {{ width: '18rem' }}>
-                <Card.Img variant='top' src={reactImg} />
-                <Card.Body>
-                    <Card.Title>ReactJS</Card.Title>
-                    <Card.Text>I have experience with web page development using ReactJS, HTML, and CSS. I have made multiple web pages using these tools including this site, and <a href='https://ulcerativecolitis.fly.dev'>my UC information page</a>.</Card.Text>
-                </Card.Body>
-            </Card>
-        </div>
+        <>
+        {[...Array(3)].map((_, index) => <br key={index} />)} {/* Referenced from ChatGPT to make adding more breaks between lines easier */}
+        <h2 className={`text-${mode === 'light' ? 'dark' : 'white'}`}>Coding Skills</h2>
+        <br />
+        <CardGroup>
+            {codingInfo.map((info) => (
+                <Card 
+                    id="skill" 
+                    className={`mx-5 border-4 skill-card skill-card-${info.border}`} 
+                    key={info.title}>
+                    <Card.Img variant='top' src={info.image} style={{ height: '18rem' }} />
+                    <Card.Body>
+                        <Card.Title className='card-title' >{info.title}</Card.Title>
+                        <Card.Text className='card-text' dangerouslySetInnerHTML={{ __html: info.description }} /> {/* Referenced from ChatGPT to allow clickable link from array text */}
+                    </Card.Body>
+                </Card>
+            ))}
+        </CardGroup>
+        <br />
+        <br />
+        </>
     )
 }

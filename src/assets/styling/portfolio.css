@@ -1,0 +1,16 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap);
+
+h1, h2, p {
+    font-family: montserrat, sans-serif;
+    margin: 50px;
+}
+
+.p-portfolio {
+    font-size: 3vw;
+}
+
+@media (max-width: 768px) {
+    h2, p {
+        margin: 24px !important;
+    }
+}

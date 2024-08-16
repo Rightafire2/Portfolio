@@ -1,3 +1,36 @@
-.skill-list {
-    border-width: 10px;
+/* ChatGPT Suggested Method of Adding Left Border to Cards */
+.skill-card {
+    border-left: 4px solid !important;
+  }
+
+.skill-card-success {
+    border-color: #28a745 !important;
+}
+
+.skill-card-primary {
+    border-color: #007bff !important;
+}
+
+.skill-card-danger {
+    border-color: #dc3545 !important;
+}
+
+.card-title {
+    text-align: center;
+}
+
+.card-text {
+    margin: 2px;
+}
+
+h2 {
+    font-size: 4vw !important;
+    text-align: center;
+    width: auto;
+}
+
+@media (max-width: 767px) {
+    h2 {
+        font-size: 50px !important;
+    }
 }
