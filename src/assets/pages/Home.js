@@ -27,7 +27,7 @@ export const Home = ({ mode }) => {
                 <ReactTyped className="typed" strings={["Software Developer", "Business Analyst"]} typeSpeed={40} backSpeed={40} loop />
             </div>
         </div>
-        {[...Array(4)].map((_, index) => <br key={index} />)} {/* Referenced from ChatGPT to make adding more breaks between lines easier */}
+        {Array(5).fill(0).map((_, i) => <br key={i} />)} {/* Referenced from ChatGPT to make adding more breaks between lines easier */}
         <div id="aboutme">
             <AboutMe mode={mode} />
         </div>

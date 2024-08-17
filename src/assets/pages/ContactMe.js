@@ -1,12 +1,13 @@
 import { Contact } from "../components/Contact";
+import React from "react";
+import '../styling/portfolio.css'
 
 export const ContactMe = ({ mode }) => {
     return (
         <>
-        <h1>CONTACT ME</h1>
+        <h1 className={`px-5 pt-5 text-${mode === 'light' ? 'dark' : 'white'}`}>CONTACT ME</h1>
         <br />
         <br />
-        <p>Feel free to contact me below!</p>
         <Contact />
         </>
     )

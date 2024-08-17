@@ -58,7 +58,7 @@ const App = () => {
                 element: (
                     <div>
                         <Navigation toggleMode={toggleMode} navData={navData} />
-                        <ContactMe />
+                        <ContactMe mode={mode} />
                     </div>
                 )
             }

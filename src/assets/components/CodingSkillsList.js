@@ -6,7 +6,7 @@ import React from 'react';
 export const CodingSkillsCards = ({ mode, codingInfo }) => {
     return (
         <>
-        {[...Array(3)].map((_, index) => <br key={index} />)} {/* Referenced from ChatGPT to make adding more breaks between lines easier */}
+        {Array(3).fill(0).map((_, i) => <br key={i} />)} {/* Referenced from ChatGPT to make adding more breaks between lines easier */}
         <h2 className={`text-${mode === 'light' ? 'dark' : 'white'}`}>Coding Skills</h2>
         <br />
         <CardGroup>
@@ -18,7 +18,7 @@ export const CodingSkillsCards = ({ mode, codingInfo }) => {
                     <Card.Img variant='top' src={info.image} style={{ height: '18rem' }} />
                     <Card.Body>
                         <Card.Title className='card-title' >{info.title}</Card.Title>
-                        <Card.Text className='card-text' dangerouslySetInnerHTML={{ __html: info.description }} /> {/* Referenced from ChatGPT to allow clickable link from array text */}
+                        <Card.Text className='card-text' dangerouslySetInnerHTML={{ __html: info.description }} /> {/* Referenced from ChatGPT to allow clickable link from array string */}
                     </Card.Body>
                 </Card>
             ))}

@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap);
 
-h1, h2, p {
+h1, h3, p {
     font-family: montserrat, sans-serif;
     margin: 50px;
 }
@@ -10,7 +10,7 @@ h1, h2, p {
 }
 
 @media (max-width: 768px) {
-    h2, p {
+    h3, p {
         margin: 24px !important;
     }
 }

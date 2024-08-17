@@ -7,17 +7,17 @@ export const carouselData = [
         "href": "/portfolio#ucwebsite"
     },
     {
-        "image": "/images/businessanalysis.jpg",
-        "title": "Title2",
-        "subtitle": "Subtitle2",
+        "image": "/images/networks.jpg",
+        "title": "Network Projects",
+        "subtitle": "Network related projects covering FTP, UDP, BGP, Raft, and more",
         "interval": 5000,
-        "href": "/#aboutme"
+        "href": "/portfolio#network"
     },
     {
-        "image": "/images/me.jpg",
-        "title": "Title3",
-        "subtitle": "Subtitle3",
+        "image": "/images/ai.jpg",
+        "title": "AI/ML Projects",
+        "subtitle": "Projects built using AI/ML technology including <to be filled in>",
         "interval": 5000,
-        "href": "/#aboutme"
+        "href": "/portfolio#ai"
     }
 ]
