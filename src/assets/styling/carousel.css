@@ -8,6 +8,7 @@ img {
 
 .carousel {
     border: 5px solid rgba(255, 0, 0, 1);
+    border-radius: 8px;
     margin: 1rem 4rem;
 }
 
