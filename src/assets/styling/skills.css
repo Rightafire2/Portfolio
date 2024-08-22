@@ -3,6 +3,7 @@
 /* ChatGPT Suggested Method of Adding Left Border to Cards */
 .skill-card {
     border-left: 4px solid !important;
+    border-radius: 50px !important;
   }
 
 .skill-card-success {

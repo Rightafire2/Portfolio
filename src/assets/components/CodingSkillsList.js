@@ -15,7 +15,7 @@ export const CodingSkillsCards = ({ mode, codingInfo }) => {
                     id="skill" 
                     className={`mx-5 border-4 skill-card skill-card-${info.border}`} 
                     key={info.title}>
-                    <Card.Img variant='top' src={info.image} style={{ height: '18rem' }} />
+                    <Card.Img variant='top' src={info.image} style={{ height: '18rem', borderRadius:'50px' }} />
                     <Card.Body>
                         <Card.Title className='card-title' >{info.title}</Card.Title>
                         <Card.Text className='card-text' dangerouslySetInnerHTML={{ __html: info.description }} /> {/* Referenced from ChatGPT to allow clickable link from array string */}
