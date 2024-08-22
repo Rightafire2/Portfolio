@@ -9,7 +9,7 @@ import { Row, Col } from 'react-bootstrap';
 export const AboutMe = ({ mode }) => {
     return (
         <>
-        <div className="m-5 about-me-container">
+        <div className="m-auto about-me-container">
             <Row className="align-items-center">
 
                 {/* mb-4 and mb-md-0 classes were sugggested by Chat-GPT for responsive design */}

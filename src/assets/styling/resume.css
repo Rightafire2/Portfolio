@@ -1,0 +1,28 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap);
+
+.resume-button {
+    width: 150px;
+    height: 50px;
+    font-size: 25px !important;
+    background-color: rgb(0, 245, 245);
+    border: 2px solid rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    border-radius: 10px !important;
+
+}
+
+.resume-button:hover {
+    background-color: rgb(0, 142, 142);
+}
+
+
+
+body.dark-mode .resume-button {
+    background-color: rgb(0, 106, 218);
+    border: 2px solid rgb(0, 0, 0);
+    color: #ffffff;
+}
+  
+body.dark-mode .resume-button:hover {
+    background-color: #000000;
+}

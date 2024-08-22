@@ -1,3 +1,4 @@
+/* Data for Carousel => image, title, subtitle, interval, href */
 export const carouselData = [
     {
         "image": "/images/ulcerativecolitis.png",
@@ -16,7 +17,7 @@ export const carouselData = [
     {
         "image": "/images/ai.jpg",
         "title": "AI/ML Projects",
-        "subtitle": "Projects built using AI/ML technology including <to be filled in>",
+        "subtitle": "Projects built using AI/ML technology including MNIST dataset classification",
         "interval": 5000,
         "href": "/portfolio#ai"
     }

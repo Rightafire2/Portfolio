@@ -4,33 +4,43 @@ import { HPParticles } from '../components/HPParticles';
 import { AboutMe } from './AboutMe';
 import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
+import { Navigation } from '../components/Navigation';
 
-export const Home = ({ mode }) => {
-    const location = useLocation();
+export const Home = ({ mode, toggleMode }) => {
+  {/* Scroll animation strategy suggested by ChatGPT */}
+  const location = useLocation();
 
-    useEffect(() => {
+  useEffect(() => {
       if (location.hash) {
         const element = document.getElementById(location.hash.substring(1));
         if (element) {
           element.scrollIntoView({ behavior: 'smooth' });
         }
       }
-    }, [location]);
+  }, [location]);
 
-    return (
+  return (
         <>
+        <Navigation mode={mode} toggleMode={toggleMode} style={{}} />
         <div className="background-image-me">
+
             <HPParticles />
             <div className="background-overlay" />
             <div className="large-text">
-                <h1 className={`text-${mode === 'light' ? 'dark' : 'red'}`}>Amogh Bharadwaj</h1>
+                <h1>Amogh Bharadwaj</h1>
                 <ReactTyped className="typed" strings={["Software Developer", "Business Analyst"]} typeSpeed={40} backSpeed={40} loop />
             </div>
         </div>
-        {Array(5).fill(0).map((_, i) => <br key={i} />)} {/* Referenced from ChatGPT to make adding more breaks between lines easier */}
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
         <div id="aboutme">
             <AboutMe mode={mode} />
         </div>
+        <br />
+        <br />
         </>
     );
 }

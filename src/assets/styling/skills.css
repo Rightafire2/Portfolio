@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap);
+
 /* ChatGPT Suggested Method of Adding Left Border to Cards */
 .skill-card {
     border-left: 4px solid !important;
@@ -27,9 +29,10 @@ h2 {
     font-size: 4vw !important;
     text-align: center;
     width: auto;
+    font-family: montserrat, sans-serif;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1250px) {
     h2 {
         font-size: 50px !important;
     }

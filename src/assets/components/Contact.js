@@ -1,9 +1,8 @@
-import React, { Button } from 'react';
-import { Icons } from './Icons.js';
+import React from 'react';
 import Swal from 'sweetalert2'
 import { Formik, Form, Field } from 'formik';
 import '../styling/contactform.css'
-
+import { SocialIcons } from './Icons.js';
 
 /* AWS Email Integration and handleSend function referenced from https://www.youtube.com/watch?v=-_hRWBpaJZk&t=98s */
 const handleSend = ( values) => {
@@ -33,7 +32,7 @@ const handleSend = ( values) => {
   });
 }
 
-/* Code derived and changed from Formik Documentaion */
+/* Code derived and changed from Formik Documentaion: https://formik.org/docs/guides/validation */
 const validate = values => {
   const errors = {};
   if (!values.name) {
@@ -53,7 +52,7 @@ const validate = values => {
   return errors;
 };
 
-export const Contact = () => {
+export const Contact = ({ mode }) => {
   const handleSubmit = (values) => {
     console.log("Submitted")
     handleSend(values)
@@ -70,6 +69,7 @@ export const Contact = () => {
       validate={validate}
       onSubmit={handleSubmit}
     >
+      {/* Mapping Strategy and Touched Handling learned from Formik Documentation: https://formik.org/docs/api/formik */}
       {({ errors, touched }) => (
         <Form className='form-container'>
           <div>
@@ -95,7 +95,9 @@ export const Contact = () => {
       )}
     </Formik>
     <br />
-    <Icons />
+    <SocialIcons />
+    <br />
+    <br />
     </>
   );
 

@@ -1,3 +1,4 @@
+/* Data for Coding Cards => image, title, description, border */
 export const codingCards = [
     {
         "image": "/images/react-logo.png",
@@ -12,9 +13,9 @@ export const codingCards = [
         "border": "primary"
     },
     {
-        "image": "/images/microsoftlogo.png",
-        "title": "Microsoft Suite",
-        "description": "I have a firm understanding on how to use the microsoft tools such as powerpoint, excel, and word to create presentations, analytical models, buisiness specs, and more.",
+        "image": "/images/r.png",
+        "title": "R",
+        "description": "I have a strong understanding of R and have used the tool for statistical analysis of datasets.",
         "border": "danger"
     },
 ]

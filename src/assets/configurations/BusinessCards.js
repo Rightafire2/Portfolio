@@ -1,3 +1,4 @@
+/* Data for Business Cards => image, title, description, border */
 export const businessCards = [
     {
         "image": "/images/businessanalysis.jpg",

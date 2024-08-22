@@ -1,3 +1,4 @@
+/* Data for Navbar => name, path */
 export const navData = [
     {
         name: "About Me",

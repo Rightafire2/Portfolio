@@ -2,6 +2,7 @@ import { useState } from "react";
 import img from '../images/me.jpg';
 import '../styling/aboutimg.css';
 
+/* Holds Image for the AboutMe Page and increases size based on whether image is hovered or focused */
 export const AboutImg = () => {
     const [over, setOver] = useState(false);
 

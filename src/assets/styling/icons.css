@@ -1,4 +1,22 @@
+.container-icons {
+    max-width: 600px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    text-align: center;
+}
+
 .icons {
-    height:0.25em;
-    width:0.25em;
+    width:100%;
+    padding: 1rem
+
+}
+
+.icon {
+    font-size: 5vh;
+}
+
+.icon:hover {
+    color: rgba(17, 0, 255, 0.87);
 }

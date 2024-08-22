@@ -5,10 +5,14 @@ import '../styling/portfolio.css'
 export const ContactMe = ({ mode }) => {
     return (
         <>
-        <h1 className={`px-5 pt-5 text-${mode === 'light' ? 'dark' : 'white'}`}>CONTACT ME</h1>
         <br />
         <br />
-        <Contact />
+        <br />
+        <h1 className={`px-auto pt-auto text-${mode === 'light' ? 'dark' : 'white'}`}>CONTACT ME</h1>
+        <br />
+        <h3 className={`text-${mode === 'light' ? 'dark' : 'white'}`} style={{ textAlign: "center" }}>Feel free to contact me below!</h3>
+        <br />
+        <Contact mode={mode} />
         </>
     )
 }
