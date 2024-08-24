@@ -12,7 +12,7 @@ export const AboutMe = ({ mode }) => {
             <section className="m-auto about-me-container">
                 <Row className="align-items-center">
 
-                    {/* mb-4 and mb-md-0 classes were sugggested by Chat-GPT for responsive design */}
+                    {/* mb-4 and mb-md-0 classes were suggested by Chat-GPT for responsive design */}
                     <Col xs={12} md={6} className="text-center mb-4 mb-md-0">
                         <AboutImg />
                     </Col>

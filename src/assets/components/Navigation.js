@@ -6,6 +6,7 @@ import { navData } from '../configurations/NavData';
 
 /* Navbar function: Creates a Navbar and handles dark mode and animation toggles */
 export const Navigation = ({ mode, toggleMode }) => {
+  
   /* Code modified from Stack Overflow due to errors with ScrollRestoration function in createBrowserRouter: https://stackoverflow.com/questions/33188994/scroll-to-the-top-of-the-page-after-render-in-react-js */
   const scrollToTop = () => {
     window.scrollTo(0, 0);
@@ -24,13 +25,6 @@ export const Navigation = ({ mode, toggleMode }) => {
 
   return (
         <Navbar collapseOnSelect expand="md" className='navbar px-5'>
-          {/*
-            <Navbar.Brand href="/">
-              <Link to={"/"} className="navbar-brand" onClick={scrollToTop}>
-                Amogh Bharadwaj
-              </Link>
-            </Navbar.Brand>
-            */}
             <Navbar.Brand as={Link} to='/' onClick={scrollToTop}>Amogh Bharadwaj</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav navbarScroll" />
             <Navbar.Collapse id="responsive-navbar-nav">

@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider, useLocation } from 'react-router-d
 import React, { useState, useEffect } from 'react';
 import { ContactMe } from './assets/pages/ContactMe.js';
 
+/* Code modified from Stack Overflow due to errors with ScrollRestoration function in createBrowserRouter: https://stackoverflow.com/questions/33188994/scroll-to-the-top-of-the-page-after-render-in-react-js */
 const ScrollToTop = () => {
     const { pathname } = useLocation();
 
@@ -68,7 +69,6 @@ const App = () => {
         }
     ]);
 
-    // Ensure ScrollToTop is within the RouterProvider to handle scroll on navigation
     return (
         <RouterProvider router={router}>
             <ScrollToTop />
