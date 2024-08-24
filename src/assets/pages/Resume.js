@@ -4,7 +4,7 @@ import '../styling/resume.css'
 /* Resume Component: Include title, description, and a button which opens my resume pdf in another page */
 export const Resume = ({ mode }) => {
     return (
-        <>
+        <main>
             <br />
             <br />
             <br />
@@ -16,6 +16,6 @@ export const Resume = ({ mode }) => {
             <a className='d-flex justify-content-center' style={{ textDecoration: "none" }} href={resume} target='_blank'>
                 <button className='resume-button'>Resume</button>
             </a>
-        </>
+        </main>
     )
 }

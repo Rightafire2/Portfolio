@@ -5,22 +5,46 @@ h1, h3, p {
     margin: 50px;
 }
 
+li {
+    font-family: montserrat, sans-serif;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+p, li {
+    font-size: 1.3vw;
+}
+
 h1 {
     text-align: center;
 }
 
-.p-portfolio {
-    font-size: 3vw;
+h3 {
+    font-size: 3vw !important;
+}
+
+@media (max-width: 1540px) {
+
+    p, li {
+        font-size: 20px;
+    }
 }
 
 @media (max-width: 768px) {
     h1 {
         font-size: 45px !important;
-      }
-    h3 {
-        font-size: 25px !important;
     }
+
+    h3 {
+        font-size: 30px !important;
+    }
+
     h3, p {
         margin: 24px !important;
+    }
+
+    li {
+        margin-left: 24px !important;
+        margin-right: 24px !important;
     }
 }

@@ -24,26 +24,25 @@ export const Navigation = ({ mode, toggleMode }) => {
 
   return (
         <Navbar collapseOnSelect expand="md" className='navbar px-5'>
+          {/*
             <Navbar.Brand href="/">
               <Link to={"/"} className="navbar-brand" onClick={scrollToTop}>
                 Amogh Bharadwaj
               </Link>
             </Navbar.Brand>
-            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            */}
+            <Navbar.Brand as={Link} to='/' onClick={scrollToTop}>Amogh Bharadwaj</Navbar.Brand>
+            <Navbar.Toggle aria-controls="responsive-navbar-nav navbarScroll" />
             <Navbar.Collapse id="responsive-navbar-nav">
-              <Nav className="ms-auto">
+              <Nav className="ms-auto" navbarScroll>
                 {navData.map((item, index) => (
-                  <Nav.Link key={index}>
-                    <Link to={item.path} onClick={scrollToTop}>
-                      {item.name}
-                    </Link>
-                  </Nav.Link>
+                  <Nav.Link eventKey={index} key={index} as={Link} to={item.path} onClick={scrollToTop}>{item.name}</Nav.Link>
                 ))}
                 <NavDropdown title="Configuration" tabIndex={0}>
-                  <NavDropdown.Item onClick={() => toggleMode()} tabIndex={0}>
+                  <NavDropdown.Item eventKey="1" onClick={() => toggleMode()} tabIndex={0}>
                     {mode === 'dark' ? 'Light Mode' : 'Dark Mode'}
                   </NavDropdown.Item>
-                  <NavDropdown.Item onClick={toggleAnimations} tabIndex={0}>
+                  <NavDropdown.Item eventKey="2" onClick={toggleAnimations} tabIndex={0}>
                     {animationsEnabled ? 'Disable Animations' : 'Enable Animations'}
                   </NavDropdown.Item>
                 </NavDropdown>

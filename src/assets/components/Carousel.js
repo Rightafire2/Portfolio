@@ -6,9 +6,9 @@ function PortfolioImages({ carouselPages }) {
   const [index, setIndex] = useState(0)
 
   const handleSelect = (selectedIndex, e) => {
-      setIndex(selectedIndex)
+    setIndex(selectedIndex)
   }
-  
+
   return (
     <Carousel activeIndex={index} onSelect={handleSelect}>
       {carouselPages?.map((page) => (

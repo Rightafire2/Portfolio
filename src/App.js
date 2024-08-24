@@ -34,7 +34,8 @@ const App = () => {
             path: "/",
             element: (
                 <div>
-                    <Home mode={mode} toggleMode={toggleMode} />
+                    <Navigation mode={mode} toggleMode={toggleMode} />
+                    <Home mode={mode} />
                 </div>
             )
         },

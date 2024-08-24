@@ -3,7 +3,7 @@ export const codingCards = [
     {
         "image": "/images/react-logo.png",
         "title": "ReactJS",
-        "description": "I have experience with web page development using ReactJS, HTML, and CSS. I have made multiple web pages using these tools including this site, and my <a href='https://ulcerativecolitis.fly.dev'>UC information page</a>.",
+        "description": "I have experience with web page development using ReactJS, HTML, and CSS. I have made multiple web pages using these tools including this site, and my UC information page.",
         "border": "success"
     },
     {
@@ -14,7 +14,7 @@ export const codingCards = [
     },
     {
         "image": "/images/r.png",
-        "title": "R",
+        "title": "R Programming",
         "description": "I have a strong understanding of R and have used the tool for statistical analysis of datasets.",
         "border": "danger"
     },

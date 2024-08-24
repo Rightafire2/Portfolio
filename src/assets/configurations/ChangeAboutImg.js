@@ -15,7 +15,7 @@ export const AboutImg = () => {
     };
 
     return (
-        <div className="image-container">
+        <section className="image-container">
             <img
                 src={img}
                 className="about-img"
@@ -25,6 +25,6 @@ export const AboutImg = () => {
                 onFocus={onOver}
                 style={{ transform: over ? "scale(1.2)" : "scale(1)" }}
             />
-        </div>
+        </section>
     );
 }

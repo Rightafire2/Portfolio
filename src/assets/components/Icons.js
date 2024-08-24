@@ -4,7 +4,7 @@ import '../styling/icons.css'
 
 export const SocialIcons = () => {
     return (
-        <div className="d-flex justify-content-center container-icons">
+        <section className="d-flex justify-content-center container-icons">
             <div className="d-flex flex-row m-3 justify-content-evenly icons">
                 <a href="https://www.facebook.com/p/Amogh-Bharadwaj-100014198475216/" style={{ color: "black" }} target="_blank">
                     <FaFacebook className="icon" />
@@ -22,6 +22,6 @@ export const SocialIcons = () => {
                     <FaLinkedin className="icon" />
                 </a>
             </div>
-        </div>
+        </section>
     )
 }

@@ -14,15 +14,18 @@ img {
 
 @media (max-width: 768px) {
     .carousel-caption h3 {
-       font-size: 1rem !important;
-       margin: 0 !important;
+        font-size: 1rem !important;
+        margin: 0 !important;
     }
+
     .carousel-caption p {
         font-size: 0.8rem !important;
     }
+
     .carousel {
         margin: 1rem;
     }
+
     img {
         height: 50vh;
     }

@@ -5,7 +5,7 @@ import '../styling/contactform.css'
 import { SocialIcons } from './Icons.js';
 
 /* AWS Email Integration and handleSend function referenced from https://www.youtube.com/watch?v=-_hRWBpaJZk&t=98s */
-const handleSend = ( values) => {
+const handleSend = (values) => {
   const { name, email, message } = values;
 
   fetch("https://epkhixxemd.execute-api.us-east-2.amazonaws.com/sendemail", {
@@ -59,46 +59,46 @@ export const Contact = ({ mode }) => {
   }
 
   return (
-    <>
-    <Formik
-      initialValues={{
-        name: '',
-        email: '',
-        message: ''
-      }}
-      validate={validate}
-      onSubmit={handleSubmit}
-    >
-      {/* Mapping Strategy and Touched Handling learned from Formik Documentation: https://formik.org/docs/api/formik */}
-      {({ errors, touched }) => (
-        <Form className='form-container'>
-          <div>
-            <label htmlFor="name">Name</label>
-            <Field name="name" type="name" />
-            {errors.name && touched.name ? <div className='error-message'>{errors.name}</div> : null}
-          </div>
+    <section>
+      <Formik
+        initialValues={{
+          name: '',
+          email: '',
+          message: ''
+        }}
+        validate={validate}
+        onSubmit={handleSubmit}
+      >
+        {/* Mapping Strategy and Touched Handling learned from Formik Documentation: https://formik.org/docs/api/formik */}
+        {({ errors, touched }) => (
+          <Form className='form-container'>
+            <div>
+              <label htmlFor="name">Name</label>
+              <Field name="name" type="name" />
+              {errors.name && touched.name ? <div className='error-message'>{errors.name}</div> : null}
+            </div>
 
-          <div>
-            <label htmlFor="email">Email</label>
-            <Field name="email" type="email" />
-            {errors.email && touched.email ? <div className="error-message">{errors.email}</div> : null}
-          </div>
+            <div>
+              <label htmlFor="email">Email</label>
+              <Field name="email" type="email" />
+              {errors.email && touched.email ? <div className="error-message">{errors.email}</div> : null}
+            </div>
 
-          <div>
-            <label htmlFor="message">Message</label>
-            <Field name="message" as="textarea" />
-            {errors.message && touched.message ? <div className="error-message">{errors.message}</div> : null}
-          </div>
+            <div>
+              <label htmlFor="message">Message</label>
+              <Field name="message" as="textarea" />
+              {errors.message && touched.message ? <div className="error-message">{errors.message}</div> : null}
+            </div>
 
-          <button type="submit">Submit</button>
-        </Form>
-      )}
-    </Formik>
-    <br />
-    <SocialIcons />
-    <br />
-    <br />
-    </>
+            <button type="submit">Submit</button>
+          </Form>
+        )}
+      </Formik>
+      <br />
+      <SocialIcons />
+      <br />
+      <br />
+    </section>
   );
 
 }

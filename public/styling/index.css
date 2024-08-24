@@ -1,0 +1,285 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap);
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+/* linear-gradient and dark-mode styling for background-gradient-light/dark, background, and transition
+   referenced from ChatGPT (root, body, body.dark-mode). Rest of body, body.dark_mode was designed by me */
+:root {
+    --background-gradient-light: linear-gradient(135deg, #ffffff, #00bdc1);
+    --background-gradient-dark: linear-gradient(135deg, #000428, #004e92);
+}
+
+body {
+    background: var(--background-gradient-light);
+    transition: background 0.5s ease;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+body.dark-mode {
+    background: var(--background-gradient-dark);
+    background-repeat: no-repeat;
+    transition: background 0.5s ease;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.background-overlay {
+    position: absolute;
+    background: url('../images/background.jpg') no-repeat center center;
+    background-size: cover;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-bottom: 1px;
+    opacity: 0.75;
+    z-index: 1;
+}
+
+.large-text {
+    display: flex;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.);
+    border-radius: 20px;
+    margin-bottom: 1px;
+}
+
+h1 {
+    color: rgb(0, 0, 0) !important;
+    font-family: montserrat, sans-serif !important;
+    font-size: 6vw !important;
+    font-weight: 500;
+}
+
+.warning {
+    font-family: montserrat, sans-serif !important;
+}
+
+.navbar-nojs {
+    position: fixed !important;
+    z-index: 100;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    top: 0;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.ul-css li {
+    display: inline;
+    margin-left: 10px;
+    margin-right: 10px;
+    float: right;
+}
+
+.special {
+    float: left !important;
+}
+
+.end {
+    padding-right: 30px !important;
+}
+
+.ul-css li a {
+    color: black;
+    font-family: montserrat, sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 32px;
+
+}
+
+.about-me-container {
+    padding: 20px;
+    margin: 25;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.abt-text-container {}
+
+.abt-text {
+    font-size: 3vw;
+    font-family: montserrat, sans-serif;
+
+}
+
+header,
+main {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+#home {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-img {
+    padding: 0;
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+    border: 4px solid rgb(0, 0, 0);
+    border-radius: 100px;
+    margin-left: 30px;
+    margin-right: 50px;
+}
+
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.portfolio a {
+    text-decoration: none;
+    font-family: montserrat, sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+}
+
+.h1-title {
+    text-align: center;
+}
+
+h3 {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+p,
+li {
+    font-size: 25px;
+}
+
+h3,
+p,
+li {
+    font-family: montserrat, sans-serif;
+    margin: 20px;
+}
+
+li {
+    margin-left: 45px !important;
+}
+
+.cards {
+    object-fit: cover;
+    width: 100%;
+    height: 50%;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 50px;
+}
+
+h5 {
+    text-align: center;
+    font-family: montserrat, sans-serif !important;
+    font-size: 45px !important;
+}
+
+.row-css {
+    display: flex;
+    width: 100% !important;
+    margin-left: 20px !important;
+    margin-right: 200px !important;
+    padding-right: 20px !important;
+    align-items: stretch;
+}
+
+.cols {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border: 5px solid green;
+    height: 100%;
+    border-radius: 50px;
+}
+
+/* Source for getting making card body grow proportional to column https://stackoverflow.com/questions/37386244/what-does-flex-1-mean */
+.cols .card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.resume-button {
+    width: 150px;
+    height: 50px;
+    font-size: 25px !important;
+    background-color: rgb(0, 245, 245);
+    border: 2px solid rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    border-radius: 10px !important;
+}
+
+.resume-button:hover {
+    background-color: rgb(0, 142, 142);
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 45px !important;
+    }
+
+    h3,
+    p {
+        margin: 24px !important;
+    }
+}
+
+@media (max-width: 870px) {
+    .ul-css li a {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 673px) {
+    .ul-css li a {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-me-container h1 {
+        font-size: 24px;
+    }
+
+    .about-me-container p {
+        font-size: 18px;
+    }
+}
