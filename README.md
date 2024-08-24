@@ -8,7 +8,7 @@ This is the source code for my portfolio website. In this README, I will outline
 
 ## Installation
 
-To start, either clone the repository or download the compressed file and unzip the file. Next, in your terminal navigate to the "final" folder and run the following command:
+To start, either clone the repository (if accessing from GitHub) or download the compressed file and unzip the file. Make sure you have node installed as it is required for launching this project. Next, in your terminal navigate to the "final" folder and run the following command:
 
 ```
 npm i
