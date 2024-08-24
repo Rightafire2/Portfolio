@@ -28,6 +28,8 @@ This should launch the code locally in your browser.
 
 ## Video Link
 
-Here is the link to my video: https://drive.google.com/file/d/1w7YH-geTsUk7EAy3zPS5deNHsHVx5pti/view?usp=sharing
+Here is the link to my video
+Google Drive: https://drive.google.com/file/d/1w7YH-geTsUk7EAy3zPS5deNHsHVx5pti/view?usp=sharing
+YouTube: https://youtu.be/64ejLj9pM3M
 
 NOTE: In the recording, I noticed a 404 error when the links on the portfolio readmes are clicked when javascript is disabled. I have fixed the error in this code and it now launches the readmes properly.
