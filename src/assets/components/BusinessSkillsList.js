@@ -14,7 +14,7 @@ export const BusinessSkillsCards = ({ mode, businessInfo }) => {
                         id="skill"
                         className={`mx-5 border-4 skill-card skill-card-${info.border}`}
                         key={info.title}>
-                        <Card.Img variant='top' src={info.image} style={{ height: '18rem', borderRadius: '50px' }} />
+                        <Card.Img variant='top' src={info.image} alt={`${info.title} Image`} style={{ height: '18rem', borderRadius: '50px' }} />
                         <Card.Body>
                             <Card.Title>{info.title}</Card.Title>
                             <Card.Text className='card-text'>{info.description}</Card.Text>

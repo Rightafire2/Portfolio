@@ -3,115 +3,135 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+
+
+  <noscript>
+    <link rel="stylesheet" type="text/css" href="/styling/index.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  </noscript>
   <title>Amogh Portfolio</title>
-  <link rel="stylesheet" href="../styling/index.css">
 </head>
 
-<header>
-  <nav class="navbar-nojs">
-    <div class="warning" style="text-align:center; font-size:20px; font-weight: 400px;">
-      JavaScript is currently disabled in your browser. Many components in the site will be not work with it off.
-    </div>
-    <ul class="ul-css">
-      <li class="special"><a href="./index.html">Amogh Bharadwaj</a></li>
-      <li class="end"><a href="./ContactMe.html">Contact Me</a></li>
-      <li><a href="./Resume.html">Resume</a></li>
-      <li><a href="./portfolio.html">Portfolio</a></li>
-      <li><a href="./index.html#aboutme">About Me</a></li>
-    </ul>
-  </nav>
-
-
-</header>
 
 <body>
+  <noscript>
+    <header>
+      <nav class="navbar-nojs">
+        <div class="warning" style="text-align:center; font-size:20px; font-weight: 400px;">
+          JavaScript is currently disabled in your browser. Some components on the site will not work properly with it
+          off..
+        </div>
+        <ul class="ul-css">
+          <li class="special"><a href="/">Amogh Bharadwaj</a></li>
+          <li class="end"><a href="/ContactMe.html">Contact Me</a></li>
+          <li><a href="/Resume.html">Resume</a></li>
+          <li><a href="/portfolio.html">Portfolio</a></li>
+          <li><a href="/#aboutme">About Me</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <h1 class="h1-title">PORTFOLIO</h1>
+      <br>
+      <br>
+      <section class="portfolio">
+        <img src="./images/ulcerativecolitis.png" alt="UC Website Image" />
+        <a href="#ucwebsite">Ulcerative Colitis Site</a>
+        <br>
+        <br>
+        <br>
+        <br>
+        <img src="./images/networks.jpg" alt="Network Projects Image" />
+        <a href="#network">Network class projects</a>
+        <br>
+        <br>
+        <br>
+        <br>
+        <img src="./images/ai.jpg" alt="AI Projects Image" />
+        <a href="#ai">AI/ML Projects</a>
+      </section>
 
-  <main>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <h1 class="h1-title">PORTFOLIO</h1>
-    <br>
-    <br>
-    <section class="portfolio">
-      <img src="./images/ulcerativecolitis.png" alt="UC Website Image" />
-      <a href="#ucwebsite">Ulcerative Colitis Site</a>
       <br>
       <br>
+      <br id="ucwebsite">
+      <h3>Ulcerative Colitis Website</h3>
+      <p>This website outlines my journey along with tricks that were helpful for me in recovery from Ulcerative
+        Colitis.
+        It is meant to serve as a useful tool for those with UC or similar IBDs, and contains tips and tricks for food
+        management/what to avoid, recipes that are safe for people with UC, an interactive map highlighting restaurants
+        and stores to shop at, tips for maintaining mental health, and information on websites and forums that I found
+        useful. The link to the website can be found <a href="https://ulcerativecolitis.fly.dev/"
+          target="_blank">here</a>.</p>
       <br>
       <br>
-      <img src="./images/networks.jpg" alt="Network Projects Image" />
-      <a href="#network">Network class projects</a>
-      <br>
-      <br>
-      <br>
-      <br>
-      <img src="./images/ai.jpg" alt="AI Projects Image" />
-      <a href="#ai">AI/ML Projects</a>
-    </section>
 
-    <br>
-    <br>
-    <br id="ucwebsite">
-    <h3>Ulcerative Colitis Website</h3>
-    <p>This website outlines my journey along with tricks that were helpful for me in recovery from Ulcerative Colitis.
-      It is meant to serve as a useful tool for those with UC or similar IBDs, and contains tips and tricks for food
-      management/what to avoid, recipes that are safe for people with UC, an interactive map highlighting restaurants
-      and stores to shop at, tips for maintaining mental health, and information on websites and forums that I found
-      useful. The link to the website can be found <a href="https://ulcerativecolitis.fly.dev/"
-        target="_blank">here</a>.</p>
-    <br>
-    <br>
-
-    <br id="network">
-    <h3>Network Class Projects</h3>
-    <p>
-      NOTE: In the interest of maintaining academic integrity, I am unable to share the source code for the programs. I
-      do have it stored in a private REPO and can make it available to anyone interested as long as it isn’t used to
-      submit coursework and doesn’t violate academic standards.
+      <br id="network">
+      <h3>Network Class Projects</h3>
+      <p>
+        NOTE: In the interest of maintaining academic integrity, I am unable to share the source code for the programs.
+        I
+        do have it stored in a private REPO and can make it available to anyone interested as long as it isn’t used to
+        submit coursework and doesn’t violate academic standards.
+        <br>
+        <br>
+      <ul>
+        <li>Wordle Solver: A Simple Wordle Solver Program. See README.md file <a href='./ReadMes/WordleSolver/README.md'
+            target='_blank'>here</a>
+        </li>
+        <li>A simple FTP client: See README.md file <a href='./ReadMes/FTP/README.md' target='_blank'>here</a></li>
+        <li>Simple BGP router</li>
+        <li>Secure Transport over UDP: See README.md file <a href='./ReadMes/UDP/README.md' target='_blank'>here</a>
+        </li>
+        <li>Multi-threaded web crawler: This implementation crawls website in search of 5 hidden secret flags. My
+          implementation uses multi-threading and a relatively straight forward iterative algorithm. Initial recursive
+          algorithm didn’t scale; single threaded iterative algorithm was too slow and didn’t meet expected performance
+          benchmarks. Conversion to a multi-threaded implementation was relatively straight forward and easily met the
+          performance benchmarks. See README.md file <a href='./ReadMes/WebCrawler/README.md' target='_blank'>here</a>
+        </li>
+        <li>Raft consensus protocol: The requirement was to implement a relatively simple distributed cache/key-value
+          datastore (similar to redis, Memcached, DynamoDB, etc.). The implementation used Raft consensus protocol. This
+          project was of particular interest to me as I could see the practical application of such a cache in a
+          commercial setting. One of our critical applications uses a commercial distributed cache to achieve
+          scalability
+          and meet performance requirements. Read more about Raft consensus protocol and browse reference
+          implementations
+          at <a href="https://raft.github.io/" target="_blank">Raft’s GitHub site</a>. There are also quite a few useful
+          YouTube videos explaining the protocol, and challenges faced. This project was one of the more complex
+          assignments I had to work on and learned a lot in the process. See README.md file <a
+            href='./ReadMes/DistributedCache/README.md' target='_blank'>here</a></li>
+      </ul>
+      </p>
       <br>
       <br>
-    <ul>
-      <li>Wordle Solver: A Simple Wordle Solver Program. See README.md file <a href='./ReadMes/WordleSolver/README.md' target='_blank'>here</a>
-      </li>
-      <li>A simple FTP client: See README.md file <a href='./ReadMes/FTP/README.md' target='_blank'>here</a></li>
-      <li>Simple BGP router</li>
-      <li>Secure Transport over UDP: See README.md file <a href='./ReadMes/UDP/README.md' target='_blank'>here</a></li>
-      <li>Multi-threaded web crawler: This implementation crawls website in search of 5 hidden secret flags. My
-        implementation uses multi-threading and a relatively straight forward iterative algorithm. Initial recursive
-        algorithm didn’t scale; single threaded iterative algorithm was too slow and didn’t meet expected performance
-        benchmarks. Conversion to a multi-threaded implementation was relatively straight forward and easily met the
-        performance benchmarks. See README.md file <a href='./ReadMes/WebCrawler/README.md' target='_blank'>here</a></li>
-      <li>Raft consensus protocol: The requirement was to implement a relatively simple distributed cache/key-value
-        datastore (similar to redis, Memcached, DynamoDB, etc.). The implementation used Raft consensus protocol. This
-        project was of particular interest to me as I could see the practical application of such a cache in a
-        commercial setting. One of our critical applications uses a commercial distributed cache to achieve scalability
-        and meet performance requirements. Read more about Raft consensus protocol and browse reference implementations
-        at <a href="https://raft.github.io/" target="_blank">Raft’s GitHub site</a>. There are also quite a few useful
-        YouTube videos explaining the protocol, and challenges faced. This project was one of the more complex
-        assignments I had to work on and learned a lot in the process. See README.md file <a href='./ReadMes/DistributedCache/README.md'
-          target='_blank'>here</a></li>
-    </ul>
-    </p>
-    <br>
-    <br>
 
-    <br id="ai">
-    <h3>AI/ML Projects</h3>
-    <p>
-      As a part of my learning of Artificial Intelligence and Machine Learning, I've built a Neural Network from scratch
-      in Python that uses the MNIST dataset to classify handwritten digits 1-9. This includes implementing loss,
-      activation functions, forward and back propagation and their necessary math, and loss and accuracy plots. The link
-      to the GitHub is provided <a href="https://github.com/Rightafire2/MNISTDigitRecognition" target="_blank">here</a>,
-      including the code, data, and explanation of the math.
-    </p>
-    <br>
+      <br id="ai">
+      <h3>AI/ML Projects</h3>
+      <p>
+        As a part of my learning of Artificial Intelligence and Machine Learning, I've built a Neural Network from
+        scratch
+        in Python that uses the MNIST dataset to classify handwritten digits 1-9. This includes implementing loss,
+        activation functions, forward and back propagation and their necessary math, and loss and accuracy plots. The
+        link
+        to the GitHub is provided <a href="https://github.com/Rightafire2/MNISTDigitRecognition"
+          target="_blank">here</a>,
+        including the code, data, and explanation of the math.
+      </p>
+      <br>
 
-  </main>
-
+    </main>
+  </noscript>
+  <script>
+    window.location.href = "/portfolio"
+  </script>
 </body>
 
 </html>
